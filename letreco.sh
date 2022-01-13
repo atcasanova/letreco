@@ -12,15 +12,17 @@ for palpite in $* ; do
     for (( i=0; i<=4; i++ )) {
       [[ "${palpite_[$i]}" == "${resposta_[$i]}" ]] && {
         let verde++
+        resposta=${resposta:0:$i}${resposta:$i+1}
         continue
       } || {
-        grep -q ${palpite_[$i]} <<< ${resposta} && {
+        grep -q ${palpite_[$i]} <<< $resposta && {
           let amarelo++
+          resposta=$(sed "s/${palpite_[$i]}//" <<< $resposta)
         }
       }
     }
     let totalv+=$verde
     let totala+=$amarelo
   done < 5letras.txt
-  echo "[$palpite] $totalv verdes $totala amarelas ($((totalv+totala)))"
+  echo "[$palpite] $totalv verdes $totala amarelas ($((totala+totalv)))"
 done
