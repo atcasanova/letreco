@@ -22,5 +22,5 @@ for palpite in $* ; do
     let totalv+=$verde
     let totala+=$amarelo
   done < 5letras.txt
-  echo "[$palpite] $totalv verdes $totala amarelas"
+  echo "[$palpite] $totalv verdes $totala amarelas ($((totalv+totala)))"
 done
