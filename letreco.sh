@@ -10,16 +10,14 @@ for palpite in $* ; do
     palpite_=( $(sed 's/./ \0/g' <<< $palpite) )
     resposta_=( $(sed 's/./ \0/g' <<< $resposta) )
     for (( i=0; i<=4; i++ )) {
-      [[ "${palpite_[$i]}" == "${resposta_[$i]}" ]] && {
+      if [[ "${palpite_[$i]}" == "${resposta_[$i]}" ]]; then
         let verde++
         resposta=${resposta:0:$i}${resposta:$i+1}
         continue
-      } || {
-        grep -q ${palpite_[$i]} <<< $resposta && {
+      elif grep -q ${palpite_[$i]} <<< $resposta; then
           let amarelo++
           resposta=$(sed "s/${palpite_[$i]}//" <<< $resposta)
-        }
-      }
+      fi
     }
     let totalv+=$verde
     let totala+=$amarelo
