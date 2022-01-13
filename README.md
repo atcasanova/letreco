@@ -54,7 +54,7 @@ meiao
 odeia
 ```
 
-Usando o script [letreco.sh](letreco.sh) podemos testar quantos palpites cada palavra entrega quando testada contra a lista toda:
+Usando o script [letreco.sh](letreco.sh) podemos testar quantoas dicas cada palavra entrega quando testada contra a lista toda (ignorando a própria palavra):
 
 ```
 $ ./letreco.sh aecio apeio apoie ateio aveio ecoai meiao odeia
