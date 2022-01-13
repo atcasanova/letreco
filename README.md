@@ -4,7 +4,8 @@ Estudo de ocorrência para ganhar no jogo Letreco
 ## Wordlist
 Usaremos a seguinte wordlist como base: https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt, filtrando apenas as palavras de 5 caracteres e convertendo tudo para minúsculas:
 
-```$ curl https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt | awk 'length($1) == 5 {print tolower($1)}' > 5letras.txt
+```
+$ curl https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt | awk 'length($1) == 5 {print tolower($1)}' > 5letras.txt
 $ wc -l 5letras.txt
 6026 letras.txt
 ```
