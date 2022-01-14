@@ -41,7 +41,7 @@ $ grep -Eo . 5letras.txt  | sort | uniq -c | sort -nr
 
 ```
 
-Temos que as letras `a`, `o`, `e`, e `i` são as de maior ocorrência no universo. Assim, podemos encontrar palavras nas quais todas as letras estão presentes e testá-las contra o universo para verificar a quantidade de dicas que elas gerariam:
+Temos que as letras `a`, `o`, `e`, `i` e `r` são as de maior ocorrência no universo. Assim, podemos encontrar palavras nas quais todas as letras estão presentes e testá-las contra o universo para verificar a quantidade de dicas que elas gerariam:
 
 ```
 $ grep a 5letras.txt | grep o | grep e | grep i
@@ -55,19 +55,46 @@ meiao
 odeia
 ```
 
-Usando o script [letreco.sh](letreco.sh) podemos testar quantoas dicas cada palavra entrega quando testada contra a lista toda (ignorando a própria palavra):
+Usando o script [letreco.sh](letreco.sh) podemos testar quantas dicas cada palavra entrega quando testada contra a lista toda (ignorando a própria palavra).
+Geramos uma lista com palavras contendo `a`, `o`, `e`, `i` e `a`, `o`, `e`, `r`. O resultado foi:
 
-```
-$ ./letreco.sh aecio apeio apoie ateio aveio ecoai meiao odeia
-[aecio] 3262 verdes 7864 amarelas (11126)
-[apeio] 2452 verdes 8330 amarelas (10782)
-[apoie] 1847 verdes 8924 amarelas (10771)
-[ateio] 2471 verdes 8687 amarelas (11158)
-[aveio] 2434 verdes 8234 amarelas (10668)
-[ecoai] 2033 verdes 9122 amarelas (11155)
-[meiao] 3920 verdes 7389 amarelas (11309)
-[odeia] 2083 verdes 8769 amarelas (10852)
 
-```
-De onde deduzimos que o melhor palpite para iniciar o jogo é `meiao`
-
+|palavra|dicas verdes|dicas amarelas|total|
+|-------|------------|--------------|-----|
+|serao|4109|7686|11795|
+|rosea|3557|8229|11786|
+|meiao|3920|7389|11309|
+|aremo|2549|8683|11232|
+|moera|2974|8247|11221|
+|aureo|3703|7517|11220|
+|remoa|3087|8132|11219|
+|ateio|2471|8687|11158|
+|ecoai|2033|9122|11155|
+|aecio|3262|7864|11126|
+|reato|3002|8096|11098|
+|terao|4066|7018|11084|
+|ecoar|1880|9195|11075|
+|rotea|3524|7540|11064|
+|lerao|4012|7032|11044|
+|aereo|3997|7038|11035|
+|onera|2021|8870|10891|
+|odeia|2083|8769|10852|
+|apeio|2452|8330|10782|
+|adore|1704|9071|10775|
+|eroda|2176|8598|10774|
+|doera|2865|7908|10773|
+|apoie|1847|8924|10771|
+|rodea|3420|7345|10765|
+|opera|1936|8779|10715|
+|pareo|3977|6725|10702|
+|arpoe|2240|8452|10692|
+|aveio|2434|8234|10668|
+|evora|1838|8768|10606|
+|garoe|2957|7641|10598|
+|verao|4014|6580|10594|
+|afore|1691|8872|10563|
+|reboa|2970|7571|10541|
+|roera|2990|7469|10459|
+|reajo|2678|7566|10244|
+|arejo|2435|7808|10243|
+|exaro|1941|8266|10207|
