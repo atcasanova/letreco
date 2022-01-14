@@ -101,7 +101,7 @@ Geramos uma lista com palavras contendo `a`, `o`, `e`, `i` e `a`, `o`, `e`, `r`.
 
 
 Analisando a aplicação do Letreco foi possível extrair toda a lista de palavras consideradas por eles, que é consideravelmente maior do que a utilizada anteriormente e contém centenas de palavras que sequer constam no [VOLP](https://www.academia.org.br/nossa-lingua/busca-no-vocabulario).
-Aplicando a mesma anàlise à essa lista, temos:
+Aplicando a mesma análise à essa lista, temos:
 
 
 |palavra|dicas verdes|dicas amarelas|total|
