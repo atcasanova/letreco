@@ -1,5 +1,5 @@
 # letreco
-Estudo de ocorrência para ganhar no jogo [https://www.gabtoschi.com/letreco/](Letreco)
+Estudo de ocorrência para ganhar no jogo [Letreco](https://www.gabtoschi.com/letreco/)
 
 ## Wordlist
 Usaremos a seguinte wordlist como base: https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt, filtrando apenas as palavras de 5 caracteres e convertendo tudo para minúsculas:
